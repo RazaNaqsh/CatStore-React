@@ -1,14 +1,23 @@
-import NavButton from "../NavButton/NavButton";
+import CustomButton from "../CustomButton/CustomButton";
 
-const Navbar = () => {
+const Navbar = ({ handleCartClick }) => {
+	const cardToggle = () => {
+		// toggle cartWindow
+	};
 	return (
-		<nav className="flex justify-between py-3 px-8">
+		<nav className="flex justify-between py-3 px-8 z-10ZZz">
 			<div>
-				<NavButton btnName="Game Store" />
+				<CustomButton btnName="Game Store" />
 			</div>
 			<div className="space-x-10">
-				<NavButton btnName="Raza" />
-				<NavButton btnName="Cart" />
+				<CustomButton
+					btnName="Raza"
+					handleClick={{}}
+				/>
+				<CustomButton
+					btnName="Cart"
+					handleClick={handleCartClick}
+				/>
 			</div>
 		</nav>
 	);
