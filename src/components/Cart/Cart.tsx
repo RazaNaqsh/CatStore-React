@@ -9,7 +9,7 @@ const Cart = ({ handleCartClick }) => {
 					<button onClick={handleCartClick}>Close</button>
 				</div>
 				<div className="flex justify-between">
-					<p className="text-lg">Total :</p>
+					<p className="text-lg px-3 py-2">Total :</p>
 					<CustomButton btnName="Checkout" />
 				</div>
 			</div>

@@ -6,3 +6,6 @@ body {
 	color: white;
 	@apply font-sans text-lg;
 }
+h1 {
+	@apply text-2xl md:text-4xl;
+}

@@ -2,7 +2,7 @@ const CustomButton = (props) => {
 	const { btnName, btnIcon, handleClick } = props;
 	return (
 		<button
-			className=""
+			className="px-3 py-2"
 			onClick={handleClick}
 		>
 			{btnName}
