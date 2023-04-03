@@ -1,10 +1,10 @@
 import { nanoid } from "@reduxjs/toolkit";
 import Ragdoll from "../assets/catImgs/ragdoll.jpg";
-import Persian from "../assets/catImgs/ragdoll.jpg";
-import ScottishFold from "../assets/catImgs/scottishFold.avif.jpg";
-import Abyssinian from "../assets/catImgs/abbyssinian.jpg.jpg";
+import Persian from "../assets/catImgs/persian.jpg";
+import ScottishFold from "../assets/catImgs/scottishFold.avif";
+import Abyssinian from "../assets/catImgs/abbyssinian.jpg";
 
-export const catsData = [
+const catsData = [
 	{
 		id: nanoid(),
 		name: "Ragdoll",
@@ -34,3 +34,5 @@ export const catsData = [
 		src: Abyssinian,
 	},
 ];
+
+export default catsData;

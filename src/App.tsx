@@ -15,7 +15,7 @@ const App = () => {
 		setCartWindow((prev) => !prev);
 	};
 	return (
-		<div>
+		<div className="bg-[#0F1011] min-h-[100vh] h-full">
 			{/* <video
 				className="videoBg"
 				autoPlay
@@ -27,11 +27,11 @@ const App = () => {
 					type="video/mp4"
 				/>
 			</video> */}
-			<img
+			{/* <img
 				src={cat}
 				alt=""
 				className="screenBg"
-			/>
+			/> */}
 			<Navbar handleCartClick={toggleCart} />
 			{cartWindow && <Cart handleCartClick={toggleCart} />}
 			<Routes>
