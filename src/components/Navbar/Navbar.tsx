@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import CustomButton from "../CustomButton/CustomButton";
 
-const Navbar = ({ handleCartClick }) => {
+const Navbar = ({ handleCartClick, purchasedCats }) => {
+	const purchaseCount = purchasedCats.length;
+
 	return (
 		<nav className="flex justify-between py-3 px-8 z-10ZZz">
 			<Link to="/">
@@ -11,10 +12,7 @@ const Navbar = ({ handleCartClick }) => {
 				<Link to="https://github.com/RazaNaqsh">
 					<h3 className="px-3 py-2">Raza</h3>
 				</Link>
-				<CustomButton
-					btnName="Cart"
-					handleClick={handleCartClick}
-				/>
+				<button onClick={handleCartClick}>Cart {purchaseCount}</button>
 			</div>
 		</nav>
 	);

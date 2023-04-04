@@ -36,8 +36,16 @@ const App = () => {
 				alt=""
 				className="screenBg"
 			/> */}
-			<Navbar handleCartClick={toggleCart} />
-			{cartWindow && <Cart handleCartClick={toggleCart} />}
+			<Navbar
+				handleCartClick={toggleCart}
+				purchasedCats={purchasedCats}
+			/>
+			{cartWindow && (
+				<Cart
+					handleCartClick={toggleCart}
+					purchasedCats={purchasedCats}
+				/>
+			)}
 			<Routes>
 				<Route
 					path="/"
