@@ -10,6 +10,13 @@ const Store = ({ cats, setCats, purchasedCats, setPurchasedCats }) => {
 						cat.id === id ? { ...cat, isSold: true } : cat
 					)
 				);
+			} else if (cat.id == id && cat.isSold === true) {
+				setPurchasedCats((prev) => prev.filter((cat) => cat.id !== id));
+				setCats((prevCats) =>
+					prevCats.map((cat) =>
+						cat.id === id ? { ...cat, isSold: false } : cat
+					)
+				);
 			}
 		});
 		console.log(purchasedCats);
