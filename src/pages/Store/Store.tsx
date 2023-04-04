@@ -1,14 +1,7 @@
 import "./Store.scss";
-import catsData from "../../utils/catsData.js";
-import CustomButton from "../../components/CustomButton/CustomButton";
-import { useState } from "react";
-const Store = () => {
-	const [cats, setCats] = useState(catsData);
-	const [purchasedCats, setPurchasedCats] = useState([]);
 
+const Store = ({ cats, setCats, purchasedCats, setPurchasedCats }) => {
 	const purchaseClick = (id: string) => {
-		// find which element in cats should go inside the
-		// const clickedCat = cats.filter((cat) => cat.id === id);
 		cats.forEach((cat) => {
 			if (cat.id === id && cat.isSold === false) {
 				setPurchasedCats((prev) => [...prev, cat]);
@@ -20,7 +13,6 @@ const Store = () => {
 			}
 		});
 		console.log(purchasedCats);
-		// setPurchasedCats(prev => ([...prev, ]))
 	};
 	const catsElement = cats.map((cat) => (
 		<div
@@ -37,14 +29,14 @@ const Store = () => {
 				className="absolute bottom-5 left-0 right-0 bg-red-500 hover:bg-red-600"
 				onClick={() => purchaseClick(cat.id)}
 			>
-				Purchase
+				{cat.isSold ? "Bought" : "Purchase"}
 			</button>
 		</div>
 	));
 	return (
 		<main>
 			<div className="p-4">
-				<h1>Browse Your CatElementsCatElements here</h1>
+				<h1>Browse Your Cats here</h1>
 				<section className="p-8">
 					<div className="flex flex-wrap justify-evenly">{catsElement}</div>
 				</section>

@@ -8,9 +8,13 @@ import { useState } from "react";
 import cat from "./assets/bg/catFace.jpg";
 import "./App.scss";
 import Cart from "./components/Cart/Cart";
+import catsData from "./utils/catsData.js";
 
 const App = () => {
 	const [cartWindow, setCartWindow] = useState(false);
+	const [cats, setCats] = useState(catsData);
+	const [purchasedCats, setPurchasedCats] = useState([]);
+
 	const toggleCart = () => {
 		setCartWindow((prev) => !prev);
 	};
@@ -41,7 +45,14 @@ const App = () => {
 				/>
 				<Route
 					path="/store"
-					element={<Store />}
+					element={
+						<Store
+							cats={cats}
+							setCats={setCats}
+							purchasedCats={purchasedCats}
+							setPurchasedCats={setPurchasedCats}
+						/>
+					}
 				/>
 			</Routes>
 		</div>
