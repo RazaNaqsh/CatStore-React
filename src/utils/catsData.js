@@ -11,6 +11,7 @@ const catsData = [
 		lifespan: "12-17 years",
 		weightRange: "12-20 Pounds",
 		src: Ragdoll,
+		price: 800,
 		isSold: false,
 	},
 	{
@@ -19,6 +20,7 @@ const catsData = [
 		lifespan: "14-15 years",
 		weightRange: "9-14 Pounds",
 		src: Persian,
+		price: 1200,
 		isSold: false,
 	},
 	{
@@ -27,6 +29,7 @@ const catsData = [
 		lifespan: "11-14 years",
 		weightRange: "5-11 Pounds",
 		src: ScottishFold,
+		price: 1500,
 		isSold: false,
 	},
 	{
@@ -35,6 +38,7 @@ const catsData = [
 		lifespan: "14-15 years",
 		weightRange: "7-10 Pounds",
 		src: Abyssinian,
+		price: 2000,
 		isSold: false,
 	},
 ];
