@@ -1,6 +1,7 @@
 import CustomButton from "../CustomButton/CustomButton";
 
 const Cart = ({ handleCartClick, purchasedCats }) => {
+	const totalPrice = purchasedCats.reduce((acc, cat) => (acc += cat.price), 0);
 	return (
 		<aside className="absolute right-0 top-0 bg-[#1A1A1A] h-full w-[25vw] min-w-[250px] py-5 px-4 z-50">
 			<div className="relative h-full">
@@ -10,13 +11,17 @@ const Cart = ({ handleCartClick, purchasedCats }) => {
 				</div>
 				<div className="mt-10 flex flex-col">
 					{purchasedCats.map((cat) => (
-						<div key={cat.id}>
+						<div
+							key={cat.id}
+							className="flex justify-between"
+						>
 							<p>{cat.name}</p>
+							<p>{cat.price} $</p>
 						</div>
 					))}
 				</div>
 				<div className="absolute bottom-5 w-full flex justify-between">
-					<p className="text-lg px-3 py-2">Total :</p>
+					<p className="text-lg px-3 py-2">Total : {totalPrice} $</p>
 					<CustomButton btnName="Checkout" />
 				</div>
 			</div>

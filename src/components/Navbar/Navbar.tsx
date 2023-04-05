@@ -9,7 +9,7 @@ const Navbar = ({ handleCartClick, purchasedCats }) => {
 				<h3 className="px-3 py-2">Katto Store</h3>
 			</Link>
 			<div className="flex space-x-10">
-				<Link to="https://github.com/RazaNaqsh">
+				<Link to="https://github.com/RazaNaqsh/CatStore-React">
 					<h3 className="px-3 py-2">Raza</h3>
 				</Link>
 				<button onClick={handleCartClick}>Cart {purchaseCount}</button>
