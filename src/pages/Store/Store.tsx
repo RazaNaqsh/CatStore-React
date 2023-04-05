@@ -23,22 +23,26 @@ const Store = ({ cats, setCats, purchasedCats, setPurchasedCats }) => {
 	};
 	const catsElement = cats.map((cat) => (
 		<div
-			className="relative w-fit"
+			className="relative w-fit bg-[#2C2C2C] rounded-md overflow-hidden"
 			key={cat.id}
 		>
-			<h1>{cat.name}</h1>
 			<img
 				src={cat.src}
 				alt="cat"
 				className="h-[250px] w-[400px] object-cover"
 			/>
-			<button
-				className="absolute bottom-5 left-0 right-0 bg-red-500 hover:bg-red-600"
-				onClick={() => purchaseClick(cat.id)}
-			>
-				{cat.isSold ? "Bought" : "Purchase"}
-			</button>
+			<div className="flex justify-between items-center pr-4">
+				<button
+					className=" text-[#94a3b8] hover:text-[#9922FF]"
+					onClick={() => purchaseClick(cat.id)}
+				>
+					{cat.isSold ? "Remove -" : "Add to cart +"}
+				</button>
+				<p>${cat.price}</p>
+			</div>
+			<h1 className="px-4 pb-3 pt-1">{cat.name}</h1>
 		</div>
+		// absolute bottom-5 left-0 right-0
 	));
 	return (
 		<main>

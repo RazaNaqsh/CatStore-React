@@ -16,7 +16,7 @@ const Cart = ({ handleCartClick, purchasedCats }) => {
 							className="flex justify-between"
 						>
 							<p>{cat.name}</p>
-							<p>{cat.price} $</p>
+							<p>${cat.price}</p>
 						</div>
 					))}
 				</div>

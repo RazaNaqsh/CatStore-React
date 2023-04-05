@@ -12,7 +12,7 @@ const Navbar = ({ handleCartClick, purchasedCats }) => {
 				<Link to="https://github.com/RazaNaqsh/CatStore-React">
 					<h3 className="px-3 py-2">Raza</h3>
 				</Link>
-				<button onClick={handleCartClick}>Cart {purchaseCount}</button>
+				<button onClick={handleCartClick}>Cart: {purchaseCount}</button>
 			</div>
 		</nav>
 	);
