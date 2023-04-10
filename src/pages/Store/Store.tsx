@@ -31,16 +31,19 @@ const Store = ({ cats, setCats, purchasedCats, setPurchasedCats }) => {
 				alt="cat"
 				className="h-[250px] w-[400px] object-cover"
 			/>
-			<div className="flex justify-between items-center pr-4">
+			<div className="flex items-center justify-between pr-4">
+				{/* text-[#94a3b8] this was the color of add to cart button*/}
 				<button
-					className=" text-[#94a3b8] hover:text-[#9922FF]"
+					className={`  hover:text-[#9922FF] ${
+						cat.isSold ? "text-red-400" : "text-green-400"
+					}`}
 					onClick={() => purchaseClick(cat.id)}
 				>
 					{cat.isSold ? "Remove -" : "Add to cart +"}
 				</button>
 				<p>${cat.price}</p>
 			</div>
-			<h1 className="px-4 pb-3 pt-1">{cat.name}</h1>
+			<h1 className="px-4 pt-1 pb-3">{cat.name}</h1>
 		</div>
 		// absolute bottom-5 left-0 right-0
 	));
